@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Chilanka&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/icon?family=Gemunu+Libre:300,400,500,600,700");
+
+@font-face {
+    font-family: "PFBeauSansPro";
+    font-weight: normal;
+    src: url(../assets/dist/font/PFBeauSansPro-Regular.woff);
+  }
+
+html {
+  font-family: "PFBeauSansPro", sans-serif;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+html::-webkit-scrollbar-track {
+  background: white;
+}
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #4ab1ff, #2d5cfe);
+  border-radius: 25px;
+}
+.border-left {
+  border-left: 1px solid #dee2e6 !important;
+}
+.border-primary {
+  border-color: #2d5cfe !important;
+}
+#Vanz {
+  background: linear-gradient(#faa504, #141001);
+  animation: rotate_4001510 7s infinite linear;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+#Vanz:before, #Vanz:after {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  border-radius: 50%;
+  right: -0.4em;
+  text-align: center;
+  line-height: 1;
+  transform: rotateY(-90deg);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+#Vanz:after {
+  transform: rotateY(-90deg);
+}
+@keyframes rotate_4001510 {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+#NavMenu.hidden {
+  transition: 1s ease-in-out;
+}
