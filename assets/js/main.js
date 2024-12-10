@@ -29,10 +29,10 @@ function ModeStudy () {
   Preloader.classList.add('loadhdn')
   setTimeout(function () {
     Preloader.classList.remove('loadhdn')
-    ModeStudNav.innerHTML = "I'm Marchelino"
+    ModeStudNav.innerHTML = "Marchelino"
     ModeStudHome.innerHTML = "I'm Marchelino"
     ModeStudAbout.innerHTML = "I'm Marchelino"
-    ModeStudFooter.innerHTML = "I'm Marchelino"
+    ModeStudFooter.innerHTML = "Marchelino"
   }, 5000)
 
   hamburger.classList.toggle('hamburger-active')
