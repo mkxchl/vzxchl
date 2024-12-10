@@ -21,6 +21,7 @@ const ModeStudNav = document.querySelector('#ModeStudyNav')
 const ModeStudHome = document.querySelector('#ModeStudyHome')
 const ModeStudAbout = document.querySelector('#ModeStudyAbout')
 const ModeStudFooter = document.querySelector('#ModeStudyFooter')
+const ModeStudyRole = document.querySelector('#RoleStudy')
 const StudyList = document.querySelector('.StudyList')
 const Preloader = document.querySelector('.preloader')
 const Bodyx = document.querySelector('body')
@@ -33,6 +34,7 @@ function ModeStudy () {
     ModeStudHome.innerHTML = "I'm Marchelino"
     ModeStudAbout.innerHTML = "Marchelino"
     ModeStudFooter.innerHTML = "Marchelino"
+    ModeStudyRole.innerHTML = "Study at Bani Saleh University"
   }, 5000)
 
   hamburger.classList.toggle('hamburger-active')
@@ -47,3 +49,13 @@ function VzxLoad () {
     Bodyx.style.overflow = 'auto'
   }, 5000)
 }
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Mencegah penggunaan F12 (DevTools)
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.key === 'U')) {
+      e.preventDefault();
+  }
+});
