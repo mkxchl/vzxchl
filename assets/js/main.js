@@ -31,7 +31,7 @@ function ModeStudy () {
     Preloader.classList.remove('loadhdn')
     ModeStudNav.innerHTML = "Marchelino"
     ModeStudHome.innerHTML = "I'm Marchelino"
-    ModeStudAbout.innerHTML = "I'm Marchelino"
+    ModeStudAbout.innerHTML = "Marchelino"
     ModeStudFooter.innerHTML = "Marchelino"
   }, 5000)
 
