@@ -30,10 +30,10 @@ function ModeStudy() {
     setTimeout(function () {
         Preloader.classList.remove('loadhdn');
       }, 5000);
-    ModeStudNav.innerHTML = "Marchelino";
-    ModeStudHome.innerHTML = "Marchelino";
-    ModeStudAbout.innerHTML = "Marchelino";
-    ModeStudFooter.innerHTML = "Marchelino";
+    ModeStudNav.innerHTML = "I'm Marchelino";
+    ModeStudHome.innerHTML = "I'm Marchelino";
+    ModeStudAbout.innerHTML = "I'm Marchelino";
+    ModeStudFooter.innerHTML = "I'm Marchelino";
     hamburger.classList.toggle('hamburger-active');
     NavMenu.classList.toggle('hidden');
     StudyList.classList.add('hdn');
