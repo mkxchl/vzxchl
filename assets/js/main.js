@@ -23,6 +23,7 @@ const ModeStudAbout = document.querySelector("#ModeStudyAbout");
 const ModeStudFooter = document.querySelector("#ModeStudyFooter");
 const StudyList = document.querySelector(".StudyList");
 const Preloader = document.querySelector('.preloader');
+const Bodyx = document.querySelector('body')
 
 function ModeStudy() {
   Preloader.classList.add('loadhdn');
@@ -38,8 +39,10 @@ function ModeStudy() {
     StudyList.classList.add('hdn');
 }
 function VzxLoad() {
+  Bodyx.style.overflow = 'hidden';
   Preloader.classList.add('loadhdn');
   setTimeout(function () {
       Preloader.classList.remove('loadhdn');
+      Bodyx.style.overflow = 'auto';
     }, 5000);
 } 
