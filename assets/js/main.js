@@ -28,6 +28,7 @@ const Bodyx = document.querySelector('body')
 
 function ModeStudy () {
   Preloader.classList.add('loadhdn')
+  Bodyx.style.overflow = 'hidden'
   setTimeout(function () {
     Preloader.classList.remove('loadhdn')
     ModeStudNav.innerHTML = "Marchelino"
@@ -35,6 +36,7 @@ function ModeStudy () {
     ModeStudAbout.innerHTML = "Marchelino"
     ModeStudFooter.innerHTML = "Marchelino"
     ModeStudyRole.innerHTML = "Study at Bani Saleh University"
+    Bodyx.style.overflow = 'auto'
   }, 5000)
 
   hamburger.classList.toggle('hamburger-active')
