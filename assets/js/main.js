@@ -25,6 +25,9 @@ const ModeStudyRole = document.querySelector('#RoleStudy')
 const StudyList = document.querySelector('.StudyList')
 const Preloader = document.querySelector('.preloader')
 const Bodyx = document.querySelector('body')
+const VanzCard = document.querySelector('.VanzCard')
+const VanzCardContent = document.querySelector('.VanzCardContent')
+const VzxBody = document.querySelector(".VzxBody")
 
 function ModeStudy () {
   Preloader.classList.add('loadhdn')
@@ -50,6 +53,10 @@ function VzxLoad () {
     Preloader.classList.remove('loadhdn')
     Bodyx.style.overflow = 'auto'
   }, 5000)
+  // VanzCard.classList.add('CardShow')
+  // setTimeout(function () {
+  //   VzxBody.classList.add("Vz3D")
+  // }, 5000)
 }
 document.addEventListener('contextmenu', function(e) {
   e.preventDefault();
@@ -61,3 +68,36 @@ document.addEventListener('keydown', function(e) {
       e.preventDefault();
   }
 });
+
+function ShowCard() {
+  VanzCard.classList.add('CardShow')
+  Bodyx.style.overflow = 'hidden'
+  hamburger.classList.toggle('hamburger-active')
+  NavMenu.classList.toggle('hidden')
+  Bodyx.style.overflow = 'hidden'
+  setTimeout(function () {
+    VzxBody.classList.add("Vz3D")
+  }, 5000)
+  
+}
+function CLoseCard() {
+  VanzCard.classList.remove('CardShow')
+  Bodyx.style.overflow = 'auto'
+}
+// Social Media
+
+function Insta() {
+  window.location.replace("https://instagram.com/marchell_kevandra")
+}
+function Face() {
+  window.location.replace("https://facebook.com/chellgnzxz")
+}
+function Gthub() {
+  window.location.replace("https://github.com/mkxchl")
+}
+function Tiktok() {
+  window.location.replace("https://tiktok.com/@mkxchl")
+}
+function Sptfy() {
+  window.location.replace("https://open.spotify.com/playlist/1ZaVZkzQxjsSPUSnLDrL27?si=c3ab6e9e91c449d4")
+}
