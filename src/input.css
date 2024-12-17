@@ -440,9 +440,6 @@ html::-webkit-scrollbar-thumb {
     animation: fadeInUp 5s;
     transition: 5s all;
     bottom: 30px;
-    transform-style: preserve-3d;
-    -webkit-box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
-    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
   }
   .VzxBodyContentThumb {
     position: relative;
@@ -799,14 +796,12 @@ html::-webkit-scrollbar-thumb {
 @keyframes fadeInUp {
   from {
     transform: translateY(100px);
-    transition: 1s;
     transform: translate3d(500px, 500px, 0);
     transform: rotateY(180deg) rotateZ(180deg);
   }
 
   to {
     transform: translateY(-10px);
-    transition: 1s;
     transform: translate3d(0, 0, 0);
     transform: rotateY(0deg) rotateZ(0deg);
     opacity: 1;
