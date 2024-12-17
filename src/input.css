@@ -7,7 +7,6 @@
   font-weight: normal;
   src: url(../assets/dist/font/PFBeauSansPro-Regular.woff);
 }
-
 html {
   scroll-behavior: smooth;
   font-family: "PFBeauSansPro", sans-serif;
@@ -84,6 +83,15 @@ html::-webkit-scrollbar-thumb {
   transition: 0.5s ease-in-out;
 }
 #ImgIV:hover {
+  transition: 0.5s ease-in-out;
+  filter: grayscale();
+  transform: scale(1.1);
+}
+#ImgV {
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+#ImgV:hover {
   transition: 0.5s ease-in-out;
   filter: grayscale();
   transform: scale(1.1);
@@ -379,5 +387,428 @@ html::-webkit-scrollbar-thumb {
 #scroll-top.active {
   top: calc(100% - 12rem);
 }
+#ProfileCard {
+  cursor: pointer;
+}
+@media screen and (max-width: 360px) {
+  .VanzCard {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+    z-index: 9999999;
+  }
+  .VanzCard.CardShow {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .VanzCard.CardShow .VanzCardContent {
+    transform: translateY(0);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .VanzCard .VanzCardContent {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(100%);
+    background-color: #0707072a;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+    overflow-y: auto;
+  }
+  .VzxBody {
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: 290px;
+    background: white;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 10px;
+    animation: fadeInUp 5s;
+    transition: 5s all;
+    bottom: 30px;
+    transform-style: preserve-3d;
+    -webkit-box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+  }
+  .VzxBodyContentThumb {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    background-image: url("../assets/img/VanzBg.gif");
+    background-position: center;
+    background-size: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .VzxBodyContentImgProf {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: 50px;
+  }
+  .VzxBodyContentImgProf img {
+    width: 30%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    border: 5px solid #fff;
+  }
+  .VzxBodyContentDetail {
+    position: relative;
+    text-align: center;
+    bottom: 40px;
+    transform-style: preserve-3d;
+    margin-bottom: 30px;
+  }
+  .VzxBodyContentDetail h4 {
+    font-weight: bold;
+    font-size: 18px;
+    transform-style: preserve-3d;
+    /* margin-bottom: -10px; */
+  }
+  .VzxBodyContentDetail span {
+    position: relative;
+    font-size: 13px;
+    transform-style: preserve-3d;
+    margin-bottom: 30px;
+  }
+  .VzxBodyContentDetailIcon {
+    position: relative;
+    margin-top: 10px;
+  }
+  .VzxBodyContentDetailIcon i {
+    /* margin-top: 30px; */
+    margin: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  .VzxBodyContentDetailIcon i:hover {
+    color: #ddd;
+    transition: 0.5s ease-in-out;
+  }
+  .VzxBody.Vz3D {
+    background-position: -100px 100px, -100px 100px;
+    transform: rotate3d(0.9, 1, 0, 30deg);
+    transition: 5s all;
+    -webkit-box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+    -webkit-transition: 0.3s;
+    transform-style: preserve-3d;
+    /* transform: rotateY(180deg) rotateZ(180deg); */
+  }
+  .VzxBody.Vz3D:hover {
+    transform: rotate3d(0, 0, 0, 0deg);
+    transition: 2s all;
+    transform-style: preserve-3d;
+  }
+  .VzxMusic {
+    position: fixed;
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    margin-top: 10px;
+    right: 10%;
+    z-index: 1;
+    place-content: center;
+    justify-content: center;
+    border-radius: 30px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  .VzxMusic:hover {
+    background-color: #eee;
+    transition: 0.5s ease;
+  }
+  .VzxMusic.HideMusic {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease;
+  }
+  .VzxMusic i {
+    position: relative;
+    place-content: center;
+    margin-right: 5px;
+  }
+  .VzxMusic p {
+    position: relative;
+    place-content: center;
+    font-size: 10px;
+  }
+  .VzxBodyImgThumb {
+    position: relative;
+    width: 90vw;
+    height: 70vh;
+    background-image: url("../assets/img/VzCard.JPG");
+    background-position: center;
+    background-size: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    /* margin-bottom: -50px; */
+    bottom: 30px;
+  }
+  .ChellName {
+    position: absolute;
+    border-top-left-radius: 15px;
+    top: 3.5%;
+    right: -13.1%;
+    transform: rotate(90deg);
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.596);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 12px;
+  }
+  .ChellRole {
+    position: absolute;
+    right: 0;
+    bottom: -20%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.596);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 12px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    /* bottom: 5%; */
+  }
+  .VzxCardxz {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* background-color: #fff; */
+    background: rgba(255, 255, 255, 0.596);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 10px;
+    bottom: 30%;
+  }
+  .VzxBodyImgProfile {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    display: flex;
+    /* bottom: 50px; */
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .VzxBodyImgProfile img {
+    position: relative;
+    width: 35%;
+    border-radius: 50px;
+    border: 5px solid white;
+    margin-bottom: 25px;
+  }
+  .VzxBodyDetail {
+    position: relative;
+    padding: 10px;
+    text-align: center;
+  }
+  .VzxBodyDetail h4 {
+    font-size: 20px;
+  }
+  .VzxBodyDetail p {
+    font-size: 12px;
+  }
+  .VzxBodyList {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    padding: 10px;
+  }
+  .VzxBodyList li {
+    position: relative;
+    display: flex;
+    text-align: center;
+  }
+  .VzxBodyList li ul {
+    position: relative;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .VzxBodyList li ul span {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .VzxBodyList li ul.VzPlace {
+    position: relative;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .VzxBodyAbout {
+    position: relative;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .VzxBodyAbout h4 {
+    font-size: 12px;
+  }
+  .VzxBodyAbout .VzxBodyAboutDesc {
+    position: relative;
+    display: flex;
+    margin-top: 5px;
+  }
+  .VzxBodyAbout .VzxBodyAboutDesc i {
+    position: relative;
+    place-content: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+  }
+  .VzxBodyAbout .VzxBodyAboutDesc p {
+    position: relative;
+    place-content: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+  }
+  .VzxBodyAbout .VzxBodyAboutDesc p.Since {
+    position: relative;
+    margin-left: 5px;
+  }
+  .VzxBodyBtn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    margin-top: 10px;
+  }
+  .VzxBodyBtn .VzxBodyBtnContent button {
+    position: relative;
+    width: 250px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      #f532f1 40%,
+      #f532f1,
+      #a141fb 60%,
+      transparent
+    );
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s ease;
+  }
+  .VzxBodyBtn .VzxBodyBtnContent button:hover {
+    background-color: rgba(255, 255, 255, 0.128);
+    transition: 0.5s ease;
+  }
+  .VxzList {
+    position: relative;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 9px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  .VxzList.sptfy {
+    background-color: #00ff5e;
+  }
+  .VxzList.store {
+    background-color: #ffbf00;
+  }
+  .VxzList.prjct {
+    background-color: rgb(133, 133, 255);
+  }
+  .VxzList i {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  .VxzList .VxzListContent {
+    position: relative;
+    flex-direction: column;
+  }
+  .VxzList .VxzListContent h4 {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    font-size: 13px;
+  }
+  .VzxBtnClose i {
+    position: absolute;
+    font-size: 30px;
+    left: 0;
+    bottom: -15%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    display: flex;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+    cursor: pointer;
+    
+  }
+
+}
 /* scroll top ends */
 
+@keyframes anim {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    transform: translateY(100px);
+    transition: 1s;
+    transform: translate3d(500px, 500px, 0);
+    transform: rotateY(180deg) rotateZ(180deg);
+  }
+
+  to {
+    transform: translateY(-10px);
+    transition: 1s;
+    transform: translate3d(0, 0, 0);
+    transform: rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+  }
+}
