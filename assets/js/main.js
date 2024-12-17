@@ -77,7 +77,7 @@ function ShowCard() {
   Bodyx.style.overflow = 'hidden'
   setTimeout(function () {
     VzxBody.classList.add("Vz3D")
-  }, 5000)
+  }, 9000)
   
 }
 function CLoseCard() {
