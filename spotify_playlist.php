@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mkxchl - Playlist</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="My Profile" />
+    <meta property="og:description" content="Marchell Kevandra | Profile" />
+    <meta property="og:url" content="https://mkxchl.github.io/" />
+    
+    <meta property="og:image" content="https://vzxchl.vercel.app/assets/img/logo.jpg" />
+    <meta property="og:image:secure_url" content="https://vzxchl.vercel.app/vanz/assets/img/logo.jpg" />
+    <meta property="og:author" content="Marchell Kevandra" />
+    <!-- Link Rel Assets Icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://vzxchl.vercel.app/vanz/assets/img/logo.jpg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://vzxchl.vercel.app/vanz/assets/img/logo.jpg" />
+    <!-- Link Rel Assets Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"/>
+    <!-- Link Rel Assets Css -->
+    <link href="listening.css" rel="stylesheet" />
+</head>
+<body onload="VzxLoad()">
+    <div class="MkBody"></div>
+    <div class="MkChoose">
+        <div class="MkChooseContent">
+          <div class="MkChooseList">
+            <div class="MkChooseListContent BgCoverx" onclick="OpenMusic()">
+                <i class='bx bx-headphone'></i>
+                <h4>Mkxchl Music</h4>
+            </div>
+            <div class="MkChooseListContent BgCoverxx" onclick="OpenSpotify()">
+                <i class="bx bxl-spotify"></i>
+                <h4>Spotify Playlist</h4>
+            </div>
+            <!-- <div class="MkChooseBtn">
+                <i class="bx bx-x" onclick="CloseDownload()"></i>
+            </div> -->
+            <div class="MkChooseFooter">
+                <p>If you need create music <a onclick="Author()">Contact Me</a></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="listening.js"></script>
+</body>
+</html>
