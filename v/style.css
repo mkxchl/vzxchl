@@ -266,7 +266,7 @@ body.dark-theme {
     text-align: center;
     white-space: nowrap;
     transform: translateY(-10px) translateX(-50%);
-    left: 55%;
+    left: 54%;
     color: white;
   }
   .VzDetailx {
@@ -794,6 +794,85 @@ body.dark-theme {
   }
   .VzxMsc.VzUpdate .VzxMscMetaContent i:hover {
     color: grey;
+    transition: 0.5s ease;
+  }
+  .EmsKine {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+    z-index: 9999999;
+  }
+  .EmsKine.EmsKineShow {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .EmsKine.EmsKineShow .EmsKineContent {
+    transform: translateY(0);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .EmsKine .EmsKineContent {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(100%);
+    background: rgb(37, 35, 56);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+    overflow-y: auto;
+  }
+  .EmsKineBody {
+    position: relative;
+  }
+  .EmsBtnIp {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 25%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 99999999999;
+  }
+  .EmsBtnIp .EmsBtnIpCrs {
+    position: fixed;
+    bottom: 5%;
+    /* width: 50%; */
+    background: #151515;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 10px;
+    text-align: center;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+  }
+  .EmsBtnIpCrsContent {
+    position: relative;
+    padding: 4px;
+  }
+  .EmsBtnIpCrsContent i {
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: aqua;
+    transition: 0.5s ease;
+  }
+  .EmsBtnIpCrsContent .btnBackHome:hover {
+    color: #ff00d0;
+    transition: 0.5s ease;
+  }
+  .EmsBtnIpCrsContent .btnGoPlaylist:hover {
+    color: #17ff07;
     transition: 0.5s ease;
   }
 }
@@ -963,7 +1042,7 @@ body.dark-theme {
     text-align: center;
     white-space: nowrap;
     transform: translateY(-10px) translateX(-50%);
-    left: 55%;
+    left: 54%;
     color: white;
   }
   .VzDetailx {
@@ -1491,6 +1570,85 @@ body.dark-theme {
   }
   .VzxMsc.VzUpdate .VzxMscMetaContent i:hover {
     color: grey;
+    transition: 0.5s ease;
+  }
+  .EmsKine {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+    z-index: 9999999;
+  }
+  .EmsKine.EmsKineShow {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .EmsKine.EmsKineShow .EmsKineContent {
+    transform: translateY(0);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .EmsKine .EmsKineContent {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(100%);
+    background: rgb(37, 35, 56);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+    overflow-y: auto;
+  }
+  .EmsKineBody {
+    position: relative;
+  }
+  .EmsBtnIp {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 25%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 99999999999;
+  }
+  .EmsBtnIp .EmsBtnIpCrs {
+    position: fixed;
+    bottom: 5%;
+    /* width: 50%; */
+    background: #151515;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 10px;
+    text-align: center;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+  }
+  .EmsBtnIpCrsContent {
+    position: relative;
+    padding: 4px;
+  }
+  .EmsBtnIpCrsContent i {
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: aqua;
+    transition: 0.5s ease;
+  }
+  .EmsBtnIpCrsContent .btnBackHome:hover {
+    color: #ff00d0;
+    transition: 0.5s ease;
+  }
+  .EmsBtnIpCrsContent .btnGoPlaylist:hover {
+    color: #17ff07;
     transition: 0.5s ease;
   }
 }
@@ -1660,7 +1818,7 @@ body.dark-theme {
     text-align: center;
     white-space: nowrap;
     transform: translateY(-10px) translateX(-50%);
-    left: 55%;
+    left: 54%;
     color: white;
   }
   .VzDetailx {
@@ -2188,6 +2346,85 @@ body.dark-theme {
   }
   .VzxMsc.VzUpdate .VzxMscMetaContent i:hover {
     color: grey;
+    transition: 0.5s ease;
+  }
+  .EmsKine {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+    z-index: 9999999;
+  }
+  .EmsKine.EmsKineShow {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .EmsKine.EmsKineShow .EmsKineContent {
+    transform: translateY(0);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .EmsKine .EmsKineContent {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(100%);
+    background: rgb(37, 35, 56);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+    overflow-y: auto;
+  }
+  .EmsKineBody {
+    position: relative;
+  }
+  .EmsBtnIp {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 25%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 99999999999;
+  }
+  .EmsBtnIp .EmsBtnIpCrs {
+    position: fixed;
+    bottom: 5%;
+    /* width: 50%; */
+    background: #151515;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 10px;
+    text-align: center;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+  }
+  .EmsBtnIpCrsContent {
+    position: relative;
+    padding: 4px;
+  }
+  .EmsBtnIpCrsContent i {
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: aqua;
+    transition: 0.5s ease;
+  }
+  .EmsBtnIpCrsContent .btnBackHome:hover {
+    color: #ff00d0;
+    transition: 0.5s ease;
+  }
+  .EmsBtnIpCrsContent .btnGoPlaylist:hover {
+    color: #17ff07;
     transition: 0.5s ease;
   }
 }
@@ -2357,7 +2594,7 @@ body.dark-theme {
     text-align: center;
     white-space: nowrap;
     transform: translateY(-10px) translateX(-50%);
-    left: 55%;
+    left: 54%;
     color: white;
   }
   .VzDetailx {
@@ -2885,6 +3122,85 @@ body.dark-theme {
   }
   .VzxMsc.VzUpdate .VzxMscMetaContent i:hover {
     color: grey;
+    transition: 0.5s ease;
+  }
+  .EmsKine {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+    z-index: 9999999;
+  }
+  .EmsKine.EmsKineShow {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .EmsKine.EmsKineShow .EmsKineContent {
+    transform: translateY(0);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .EmsKine .EmsKineContent {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(100%);
+    background: rgb(37, 35, 56);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+    overflow-y: auto;
+  }
+  .EmsKineBody {
+    position: relative;
+  }
+  .EmsBtnIp {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 25%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 99999999999;
+  }
+  .EmsBtnIp .EmsBtnIpCrs {
+    position: fixed;
+    bottom: 5%;
+    /* width: 50%; */
+    background: #151515;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 10px;
+    text-align: center;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+  }
+  .EmsBtnIpCrsContent {
+    position: relative;
+    padding: 4px;
+  }
+  .EmsBtnIpCrsContent i {
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: aqua;
+    transition: 0.5s ease;
+  }
+  .EmsBtnIpCrsContent .btnBackHome:hover {
+    color: #ff00d0;
+    transition: 0.5s ease;
+  }
+  .EmsBtnIpCrsContent .btnGoPlaylist:hover {
+    color: #17ff07;
     transition: 0.5s ease;
   }
 }
@@ -3582,6 +3898,85 @@ body.dark-theme {
   }
   .VzxMsc.VzUpdate .VzxMscMetaContent i:hover {
     color: grey;
+    transition: 0.5s ease;
+  }
+  .EmsKine {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+    z-index: 9999999;
+  }
+  .EmsKine.EmsKineShow {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .EmsKine.EmsKineShow .EmsKineContent {
+    transform: translateY(0);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .EmsKine .EmsKineContent {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(100%);
+    background: rgb(37, 35, 56);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+    overflow-y: auto;
+  }
+  .EmsKineBody {
+    position: relative;
+  }
+  .EmsBtnIp {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 25%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 99999999999;
+  }
+  .EmsBtnIp .EmsBtnIpCrs {
+    position: fixed;
+    bottom: 5%;
+    /* width: 50%; */
+    background: #151515;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 10px;
+    text-align: center;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+  }
+  .EmsBtnIpCrsContent {
+    position: relative;
+    padding: 4px;
+  }
+  .EmsBtnIpCrsContent i {
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: aqua;
+    transition: 0.5s ease;
+  }
+  .EmsBtnIpCrsContent .btnBackHome:hover {
+    color: #ff00d0;
+    transition: 0.5s ease;
+  }
+  .EmsBtnIpCrsContent .btnGoPlaylist:hover {
+    color: #17ff07;
     transition: 0.5s ease;
   }
 }
