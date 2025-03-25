@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" name="og:title" content="Profile - Link" />
+    <meta
+      property="og:image"
+      name="og:image"
+      content="https://avatars.githubusercontent.com/u/117437628?s=400&u=0ef8b2932afde91990c444c4553a6310842583a9&v=4"
+    />
+    <meta
+      property="og:description"
+      name="og:description"
+      content="Just an ordinary person."
+    />
+    <meta 
+      property="og:url" 
+      content="https://vzxchl.vercel.app/" />
+    <meta
+      property="og:image"
+      content="https://avatars.githubusercontent.com/u/117437628?s=400&u=0ef8b2932afde91990c444c4553a6310842583a9&v=4"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://avatars.githubusercontent.com/u/117437628?s=400&u=0ef8b2932afde91990c444c4553a6310842583a9&v=4"
+    />
+    <meta property="og:author" content="Marchell Kevandra" />
+    <!-- Fonts Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- CSs Style -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Image URL -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://avatars.githubusercontent.com/u/117437628?s=400&u=0ef8b2932afde91990c444c4553a6310842583a9&v=4"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://avatars.githubusercontent.com/u/117437628?s=400&u=0ef8b2932afde91990c444c4553a6310842583a9&v=4jpg"
+    />
+    <title>About | Mk</title>
+  </head>
+  <body
+    oncontextmenu="return false"
+    onkeydown="return false;"
+    onmousedown="return false;"
+    onload="VzxxxLoad()"
+  >
+    <!-- Card Body -->
+    <div class="card overflow" data-state="#home" id="Homex">
+      <div class="card-header">
+        <div class="card-cover"></div>
+        <i class="bx bx-face change-theme" onclick="OpenMenu()"></i>
+        <img class="card-avatar" src="../playlist/img/7x1.jpg" alt="avatar" />
+        <h1 class="card-fullname">Marchell Kevandra</h1>
+        <h2 class="card-jobtitle">BE YOUR SELF</h2>
+      </div>
+      <div class="card-main">
+        <div class="card-section is-active" id="home">
+          <div class="card-content">
+            <div class="card-subtitle">
+              <h4>About Me</h4>
+              <p class="mk-cont">
+                Stop being afraid of what can go wrong and start being positive
+                about what can go right.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card Profile -->
+        <div class="card-section" id="profile">
+          <div class="MKOverflowx">
+            <div class="card-content">
+              <div class="VzDetailx">
+                <h4>Job desc</h4>
+                <p>Data Analyst - Design Ui/UX</p>
+              </div>
+              <div class="VzDetailx">
+                <h4>Hobby</h4>
+                <p>Reading - Listen Music</p>
+              </div>
+              <div class="VzDetailx">
+                <h4>Status</h4>
+                <p>Study</p>
+              </div>
+              <div class="VzDetailx">
+                <h4>Stay in</h4>
+                <p>Jakarta - Indonesia</p>
+              </div>
+              <!-- <div class="VzTeamsx">
+                <h4>My Team</h4>
+                <div class="VzTeamsxContent">
+                  <img src="https://editor-miring-squad.netlify.app/assets/images/TNG.jpg" alt="TNG Programmer" onclick="OpenImgA()" class="ImageA" >
+                  <img src="https://editor-miring-squad.netlify.app/assets/images/tca.jpg" alt="Trisakti Cyber Army" onclick="OpenImgB()">
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <!-- Card Button -->
+        <div class="card-buttons">
+          <button data-section="#home" class="is-active Bthome">HOME</button>
+          <button data-section="#profile" class="BtProf" onclick="BtnProfile()">
+            PROFILE
+          </button>
+          <!-- <button data-section="#contact">CONTACT</button> -->
+        </div>
+      </div>
+    </div>
+    <div class="VanzMedia">
+      <div class="VanzMediaOverlay"></div>
+      <div class="VanzMediaContent">
+        <div class="VanzMediaContentBody BtnClose" onclick="CloseMenu()">
+          <i class="bx bx-x"></i>
+        </div>
+        <div class="VanzMediaContentBody" onclick="mkSptf()">
+          <i class="bx bxl-spotify"></i>
+        </div>
+        <div class="VanzMediaContentBody" onclick="mkInstagram()">
+          <i class="bx bxl-instagram"></i>
+        </div>
+        <div class="VanzMediaContentBody" onclick="mkFacebook()">
+          <i class="bx bxl-facebook"></i>
+        </div>
+        <div class="VanzMediaContentBody" onclick="mkGit()">
+          <i class="bx bxl-github"></i>
+        </div>
+        <div class="VanzMediaContentBody" onclick="MKAudioxxx()">
+          <i class="bx bx-headphone"></i>
+        </div>
+        <div class="VanzMediaContentBody">
+          <i class="ri-moon-line" id="theme-button"></i>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="VzxMsc">
+      <div class="VzxMscMeta">
+        <i class="bx bx-headphone"></i>
+        <div class="VzxMscMetaContent">
+          <h4>Title Music -</h4>
+          <p>Author Music</p>
+          <i class="bx bx-x"></i>
+        </div>
+      </div>
+    </div> -->
+    <!-- <audio id="myAudio">
+      <source src="https://editor-miring-squad.netlify.app/about/mix/mk-anime-song.mp3" type="audio/mpeg" />
+    </audio> -->
+    <!-- Style JS -->
+    <script type="text/javascript" src="mainxx.js"></script>
+    <!-- <script type="text/javascript" src="/assets/js/query.min.js"></script> -->
+    <!-- Library JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.all.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      document.onkeydown = function (e) {
+        if (e.keyCode == 123) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+          return false;
+        }
+
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
+          return false;
+        }
+      };
+    </script>
+  </body>
+</html>
+
