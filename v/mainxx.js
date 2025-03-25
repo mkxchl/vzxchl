@@ -6,6 +6,7 @@ const card = document.querySelector(".card");
 const ImageA = document.querySelector(".ImageA");
 const VanzMedia = document.querySelector(".VanzMedia");
 const VzMusic = document.querySelector(".VzxMsc");
+const EmsKine = document.querySelector(".EmsKine");
 
 const handleButtonClick = (e) => {
   const targetSection = e.target.getAttribute("data-section");
@@ -29,9 +30,8 @@ SongAudio.autoplay = false;
 
 function VzxxxLoad() {
   setTimeout(function () {
-    VzMusic.classList.add("VzUpdate");
-    SongAudio.play();
-  }, 1500);
+    EmsKine.classList.add("EmsKineShow");
+  }, 5);
 }
 
 function OpenImgA() {
@@ -91,24 +91,41 @@ function playMyAudio() {
 /// Function Link  ///
 function mkFacebook() {
   window.location.replace("https://www.facebook.com/chellgnzxz");
+  klik.play();
 }
 function mkSptf() {
+  EmsKine.classList.remove("EmsKineShow");
+  klik.play();
   window.location.replace("https://open.spotify.com/playlist/1ZaVZkzQxjsSPUSnLDrL27?si=4362b6d2141140a9");
 }
 function mkInstagram() {
+  klik.play();
   window.location.replace("https://www.instagram.com/chellgnzxz_");
 }
 function mkWebsite() {
+  klik.play();
   window.location.replace("https://mk-links.netlify.app/");
 }
 function mkGit() {
+  klik.play();
   window.location.replace("https://github.com/mkxchl");
 }
 function mkSoundcloud() {
+  klik.play();
   window.location.replace("https://soundcloud.com/marchellkevandra");
 }
 function MKAudioxxx() {
+  klik.play();
   SongAudio.play();
+}
+function OpenFrameSpotify() {
+  klik.play();
+  EmsKine.classList.add("EmsKineShow");
+  VanzMedia.classList.remove("VanzMediaShow");
+}
+function CloseIframe() {
+  klik.play();
+  EmsKine.classList.remove("EmsKineShow");
 }
 document.querySelector(".hati").addEventListener("click", function () {
   confetti();
