@@ -6,7 +6,7 @@ const Homex = document.getElementById('Homex')
 const Profile = document.getElementById('Profile')
 const Profxxx = document.getElementById('Profxxx')
 const playPauseButton = document.getElementById('playPauseButton')
-const NavMusic = document.querySelector(".NavMusic");
+const NavMusic = document.querySelector('.NavMusic')
 const VxAuthorMeta = document.querySelector('.VxAuthorMeta')
 let isPlaying = false
 
@@ -41,13 +41,15 @@ function PlayxMusic () {
     VxAuthorMeta.classList.add('NonActive')
     VxAuthorContent.classList.add('DelHeight')
   }
-  isPlaying = !isPlaying;
+  isPlaying = !isPlaying
 }
-function Remove() {
+function Remove () {
+  playPauseButton.classList.remove('bx-pause')
+  playPauseButton.classList.add('bx-play')
   MkXadios.pause()
   VxAuthorContent.classList.remove('DelHeight')
   NavMusic.classList.remove('ShowMsc')
-    VxAuthorMeta.classList.remove('NonActive')
+  VxAuthorMeta.classList.remove('NonActive')
 }
 var klik = new Audio('https://editor-miring-squad.netlify.app/am/mix/klik.mp3')
 klik.loop = false
