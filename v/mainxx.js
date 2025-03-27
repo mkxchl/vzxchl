@@ -44,6 +44,7 @@ function PlayxMusic () {
   isPlaying = !isPlaying;
 }
 function Remove() {
+  MkXadios.pause()
   VxAuthorContent.classList.remove('DelHeight')
   NavMusic.classList.remove('ShowMsc')
     VxAuthorMeta.classList.remove('NonActive')
