@@ -10,7 +10,10 @@
   font-weight: normal;
   src: url(https://mkxchl.github.io/chlxmk/assets/dist/font/PFBeauSansPro-Regular.woff);
 }
-
+::selection {
+  background-color: purple;
+  color: white;
+}
 * {
   padding: 0;
   margin: 0;
@@ -34,6 +37,46 @@ body {
   .VxAuthor {
     opacity: 0;
     pointer-events: none;
+  }
+}
+
+@keyframes wave1 {
+  from {
+    transform: scaleY(1);
+  }
+
+  to {
+    transform: scaleY(0.5);
+  }
+}
+
+@keyframes wave2 {
+  from {
+    transform: scaleY(0.3);
+  }
+
+  to {
+    transform: scaleY(0.6);
+  }
+}
+
+@keyframes wave3 {
+  from {
+    transform: scaleY(0.6);
+  }
+
+  to {
+    transform: scaleY(0.8);
+  }
+}
+
+@keyframes wave4 {
+  from {
+    transform: scaleY(0.2);
+  }
+
+  to {
+    transform: scaleY(0.5);
   }
 }
 @media (min-width: 400px) {
@@ -82,6 +125,7 @@ body {
     /* overflow-y: auto; */
   }
   .VxAuthor .VxAuthorContent.UpdateHeight .VxAuthorHeader img {
+    transform: none;
     opacity: 1;
     transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
   }
@@ -119,6 +163,7 @@ body {
   }
   .VxAuthorDetail {
     position: relative;
+    margin-top: 15px;
     top: 50px;
     text-align: center;
     opacity: 0;
@@ -162,6 +207,8 @@ body {
   }
   .VxAuthorMeta {
     position: relative;
+    /* bottom: 30px; */
+    /* margin-top: 20px; */
     top: 80px;
     margin-left: 25px;
     margin-right: 25px;
@@ -278,16 +325,142 @@ body {
     width: 20%;
     top: 30%;
     transform: translateX(5%) translateY(0);
+    transform: none;
     transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
   }
   .VxAuthor .VxAuthorContent.Contactxx .VxAuthorDetail {
     position: relative;
     text-align: left;
     top: 30px;
-    transform: none;
     left: 20px;
   }
+  .NavMusic {
+    position: fixed;
+    justify-content: center;
+    bottom: 7%;
+    padding: 10px;
+    border-radius: 50px;
+    /* top: 50%; */
+    /* right: 55%; */
+    /* margin-bottom: 50px; */
+    text-align: center;
+    z-index: 999999999999;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease;
+  }
+  .NavMusic.ShowMsc {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.5s ease;
+  }
+  .wave-menu {
+    border-radius: 50px;
+    width: 200px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transition: ease 0.2s;
+    position: relative;
+  }
+  .wave-menu li {
+    list-style: none;
+    height: 10px;
+    width: 4px;
+    border-radius: 10px;
+    background: #00bfff;
+    margin: 0 6px;
+    padding: 0;
+    animation-name: wave1;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: ease 0.2s;
+  }
+  .wave-menu li:nth-child(2) {
+    animation-name: wave2;
+    animation-delay: 0.2s;
+  }
+  .wave-menu li:nth-child(3) {
+    animation-name: wave3;
+    animation-delay: 0.23s;
+    animation-duration: 0.4s;
+  }
+  .wave-menu li:nth-child(4) {
+    animation-name: wave4;
+    animation-delay: 0.1s;
+    animation-duration: 0.3s;
+  }
+  .wave-menu li:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .wave-menu li:nth-child(6) {
+    animation-name: wave2;
+    animation-duration: 0.5s;
+  }
+  .wave-menu li:nth-child(8) {
+    animation-name: wave4;
+    animation-delay: 0.4s;
+    animation-duration: 0.25s;
+  }
+  .wave-menu li:nth-child(9) {
+    animation-name: wave3;
+    animation-delay: 0.15s;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    background: rgb(255, 254, 254);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader img {
+    position: fixed;
+    left: 39%;
+    width: 20%;
+    top: 8%;
+    border: none;
+    transform: translateX(5%) translateY(0);
+    transition: 0.5s ease;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail {
+    position: relative;
+    top: 90px;
+    transform: none;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail h4 {
+    font-size: 16px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic {
+    position: relative;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic h4 {
+    font-size: 12px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic span {
+    font-size: 12px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight #Profxxx {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .BxtnBack {
+    position: relative;
+    top: 25px;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .BxtnBack h4 {
+    font-weight: normal;
+    font-size: 12px;
+  }
 }
+
 @media (min-width: 390px) {
   .VxAuthor {
     position: fixed;
@@ -334,6 +507,7 @@ body {
     /* overflow-y: auto; */
   }
   .VxAuthor .VxAuthorContent.UpdateHeight .VxAuthorHeader img {
+    transform: none;
     opacity: 1;
     transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
   }
@@ -371,7 +545,7 @@ body {
   }
   .VxAuthorDetail {
     position: relative;
-    margin-top: 20px;
+    margin-top: 15px;
     top: 50px;
     text-align: center;
     opacity: 0;
@@ -415,6 +589,8 @@ body {
   }
   .VxAuthorMeta {
     position: relative;
+    /* bottom: 30px; */
+    /* margin-top: 20px; */
     top: 80px;
     margin-left: 25px;
     margin-right: 25px;
@@ -531,16 +707,142 @@ body {
     width: 20%;
     top: 30%;
     transform: translateX(5%) translateY(0);
+    transform: none;
     transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
   }
   .VxAuthor .VxAuthorContent.Contactxx .VxAuthorDetail {
     position: relative;
     text-align: left;
     top: 30px;
-    transform: none;
     left: 20px;
   }
+  .NavMusic {
+    position: fixed;
+    justify-content: center;
+    bottom: 7%;
+    padding: 10px;
+    border-radius: 50px;
+    /* top: 50%; */
+    /* right: 55%; */
+    /* margin-bottom: 50px; */
+    text-align: center;
+    z-index: 999999999999;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease;
+  }
+  .NavMusic.ShowMsc {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.5s ease;
+  }
+  .wave-menu {
+    border-radius: 50px;
+    width: 200px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transition: ease 0.2s;
+    position: relative;
+  }
+  .wave-menu li {
+    list-style: none;
+    height: 10px;
+    width: 4px;
+    border-radius: 10px;
+    background: #00bfff;
+    margin: 0 6px;
+    padding: 0;
+    animation-name: wave1;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: ease 0.2s;
+  }
+  .wave-menu li:nth-child(2) {
+    animation-name: wave2;
+    animation-delay: 0.2s;
+  }
+  .wave-menu li:nth-child(3) {
+    animation-name: wave3;
+    animation-delay: 0.23s;
+    animation-duration: 0.4s;
+  }
+  .wave-menu li:nth-child(4) {
+    animation-name: wave4;
+    animation-delay: 0.1s;
+    animation-duration: 0.3s;
+  }
+  .wave-menu li:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .wave-menu li:nth-child(6) {
+    animation-name: wave2;
+    animation-duration: 0.5s;
+  }
+  .wave-menu li:nth-child(8) {
+    animation-name: wave4;
+    animation-delay: 0.4s;
+    animation-duration: 0.25s;
+  }
+  .wave-menu li:nth-child(9) {
+    animation-name: wave3;
+    animation-delay: 0.15s;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    background: rgb(255, 254, 254);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader img {
+    position: fixed;
+    left: 39%;
+    width: 20%;
+    top: 8%;
+    border: none;
+    transform: translateX(5%) translateY(0);
+    transition: 0.5s ease;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail {
+    position: relative;
+    top: 90px;
+    transform: none;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail h4 {
+    font-size: 16px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic {
+    position: relative;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic h4 {
+    font-size: 12px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic span {
+    font-size: 12px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight #Profxxx {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .BxtnBack {
+    position: relative;
+    top: 25px;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .BxtnBack h4 {
+    font-weight: normal;
+    font-size: 12px;
+  }
 }
+
 @media (min-width: 380px) {
   .VxAuthor {
     position: fixed;
@@ -587,6 +889,7 @@ body {
     /* overflow-y: auto; */
   }
   .VxAuthor .VxAuthorContent.UpdateHeight .VxAuthorHeader img {
+    transform: none;
     opacity: 1;
     transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
   }
@@ -624,6 +927,7 @@ body {
   }
   .VxAuthorDetail {
     position: relative;
+    margin-top: 15px;
     top: 50px;
     text-align: center;
     opacity: 0;
@@ -667,6 +971,8 @@ body {
   }
   .VxAuthorMeta {
     position: relative;
+    /* bottom: 30px; */
+    /* margin-top: 20px; */
     top: 80px;
     margin-left: 25px;
     margin-right: 25px;
@@ -783,16 +1089,142 @@ body {
     width: 20%;
     top: 30%;
     transform: translateX(5%) translateY(0);
+    transform: none;
     transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
   }
   .VxAuthor .VxAuthorContent.Contactxx .VxAuthorDetail {
     position: relative;
     text-align: left;
     top: 30px;
-    transform: none;
     left: 20px;
   }
+  .NavMusic {
+    position: fixed;
+    justify-content: center;
+    bottom: 7%;
+    padding: 10px;
+    border-radius: 50px;
+    /* top: 50%; */
+    /* right: 55%; */
+    /* margin-bottom: 50px; */
+    text-align: center;
+    z-index: 999999999999;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease;
+  }
+  .NavMusic.ShowMsc {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.5s ease;
+  }
+  .wave-menu {
+    border-radius: 50px;
+    width: 200px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transition: ease 0.2s;
+    position: relative;
+  }
+  .wave-menu li {
+    list-style: none;
+    height: 10px;
+    width: 4px;
+    border-radius: 10px;
+    background: #00bfff;
+    margin: 0 6px;
+    padding: 0;
+    animation-name: wave1;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: ease 0.2s;
+  }
+  .wave-menu li:nth-child(2) {
+    animation-name: wave2;
+    animation-delay: 0.2s;
+  }
+  .wave-menu li:nth-child(3) {
+    animation-name: wave3;
+    animation-delay: 0.23s;
+    animation-duration: 0.4s;
+  }
+  .wave-menu li:nth-child(4) {
+    animation-name: wave4;
+    animation-delay: 0.1s;
+    animation-duration: 0.3s;
+  }
+  .wave-menu li:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .wave-menu li:nth-child(6) {
+    animation-name: wave2;
+    animation-duration: 0.5s;
+  }
+  .wave-menu li:nth-child(8) {
+    animation-name: wave4;
+    animation-delay: 0.4s;
+    animation-duration: 0.25s;
+  }
+  .wave-menu li:nth-child(9) {
+    animation-name: wave3;
+    animation-delay: 0.15s;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    background: rgb(255, 254, 254);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader img {
+    position: fixed;
+    left: 39%;
+    width: 20%;
+    top: 8%;
+    border: none;
+    transform: translateX(5%) translateY(0);
+    transition: 0.5s ease;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail {
+    position: relative;
+    top: 90px;
+    transform: none;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail h4 {
+    font-size: 16px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic {
+    position: relative;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic h4 {
+    font-size: 12px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic span {
+    font-size: 12px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight #Profxxx {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .BxtnBack {
+    position: relative;
+    top: 25px;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .BxtnBack h4 {
+    font-weight: normal;
+    font-size: 12px;
+  }
 }
+
 @media (min-width: 370px) {
   .VxAuthor {
     position: fixed;
@@ -839,6 +1271,7 @@ body {
     /* overflow-y: auto; */
   }
   .VxAuthor .VxAuthorContent.UpdateHeight .VxAuthorHeader img {
+    transform: none;
     opacity: 1;
     transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
   }
@@ -876,6 +1309,7 @@ body {
   }
   .VxAuthorDetail {
     position: relative;
+    margin-top: 15px;
     top: 50px;
     text-align: center;
     opacity: 0;
@@ -919,6 +1353,8 @@ body {
   }
   .VxAuthorMeta {
     position: relative;
+    /* bottom: 30px; */
+    /* margin-top: 20px; */
     top: 80px;
     margin-left: 25px;
     margin-right: 25px;
@@ -1035,16 +1471,142 @@ body {
     width: 20%;
     top: 30%;
     transform: translateX(5%) translateY(0);
+    transform: none;
     transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
   }
   .VxAuthor .VxAuthorContent.Contactxx .VxAuthorDetail {
     position: relative;
     text-align: left;
     top: 30px;
-    transform: none;
     left: 20px;
   }
+  .NavMusic {
+    position: fixed;
+    justify-content: center;
+    bottom: 7%;
+    padding: 10px;
+    border-radius: 50px;
+    /* top: 50%; */
+    /* right: 55%; */
+    /* margin-bottom: 50px; */
+    text-align: center;
+    z-index: 999999999999;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease;
+  }
+  .NavMusic.ShowMsc {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.5s ease;
+  }
+  .wave-menu {
+    border-radius: 50px;
+    width: 200px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transition: ease 0.2s;
+    position: relative;
+  }
+  .wave-menu li {
+    list-style: none;
+    height: 10px;
+    width: 4px;
+    border-radius: 10px;
+    background: #00bfff;
+    margin: 0 6px;
+    padding: 0;
+    animation-name: wave1;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: ease 0.2s;
+  }
+  .wave-menu li:nth-child(2) {
+    animation-name: wave2;
+    animation-delay: 0.2s;
+  }
+  .wave-menu li:nth-child(3) {
+    animation-name: wave3;
+    animation-delay: 0.23s;
+    animation-duration: 0.4s;
+  }
+  .wave-menu li:nth-child(4) {
+    animation-name: wave4;
+    animation-delay: 0.1s;
+    animation-duration: 0.3s;
+  }
+  .wave-menu li:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .wave-menu li:nth-child(6) {
+    animation-name: wave2;
+    animation-duration: 0.5s;
+  }
+  .wave-menu li:nth-child(8) {
+    animation-name: wave4;
+    animation-delay: 0.4s;
+    animation-duration: 0.25s;
+  }
+  .wave-menu li:nth-child(9) {
+    animation-name: wave3;
+    animation-delay: 0.15s;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    background: rgb(255, 254, 254);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader img {
+    position: fixed;
+    left: 39%;
+    width: 20%;
+    top: 8%;
+    border: none;
+    transform: translateX(5%) translateY(0);
+    transition: 0.5s ease;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail {
+    position: relative;
+    top: 90px;
+    transform: none;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail h4 {
+    font-size: 16px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic {
+    position: relative;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic h4 {
+    font-size: 12px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic span {
+    font-size: 12px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight #Profxxx {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .BxtnBack {
+    position: relative;
+    top: 25px;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .BxtnBack h4 {
+    font-weight: normal;
+    font-size: 12px;
+  }
 }
+
 @media (min-width: 360px) {
   .VxAuthor {
     position: fixed;
@@ -1091,6 +1653,7 @@ body {
     /* overflow-y: auto; */
   }
   .VxAuthor .VxAuthorContent.UpdateHeight .VxAuthorHeader img {
+    transform: none;
     opacity: 1;
     transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
   }
@@ -1128,6 +1691,7 @@ body {
   }
   .VxAuthorDetail {
     position: relative;
+    margin-top: 15px;
     top: 50px;
     text-align: center;
     opacity: 0;
@@ -1171,6 +1735,8 @@ body {
   }
   .VxAuthorMeta {
     position: relative;
+    /* bottom: 30px; */
+    /* margin-top: 20px; */
     top: 80px;
     margin-left: 25px;
     margin-right: 25px;
@@ -1287,13 +1853,138 @@ body {
     width: 20%;
     top: 30%;
     transform: translateX(5%) translateY(0);
+    transform: none;
     transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
   }
   .VxAuthor .VxAuthorContent.Contactxx .VxAuthorDetail {
     position: relative;
     text-align: left;
     top: 30px;
-    transform: none;
     left: 20px;
+  }
+  .NavMusic {
+    position: fixed;
+    justify-content: center;
+    bottom: 7%;
+    padding: 10px;
+    border-radius: 50px;
+    /* top: 50%; */
+    /* right: 55%; */
+    /* margin-bottom: 50px; */
+    text-align: center;
+    z-index: 999999999999;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s ease;
+  }
+  .NavMusic.ShowMsc {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.5s ease;
+  }
+  .wave-menu {
+    border-radius: 50px;
+    width: 200px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transition: ease 0.2s;
+    position: relative;
+  }
+  .wave-menu li {
+    list-style: none;
+    height: 10px;
+    width: 4px;
+    border-radius: 10px;
+    background: #00bfff;
+    margin: 0 6px;
+    padding: 0;
+    animation-name: wave1;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: ease 0.2s;
+  }
+  .wave-menu li:nth-child(2) {
+    animation-name: wave2;
+    animation-delay: 0.2s;
+  }
+  .wave-menu li:nth-child(3) {
+    animation-name: wave3;
+    animation-delay: 0.23s;
+    animation-duration: 0.4s;
+  }
+  .wave-menu li:nth-child(4) {
+    animation-name: wave4;
+    animation-delay: 0.1s;
+    animation-duration: 0.3s;
+  }
+  .wave-menu li:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .wave-menu li:nth-child(6) {
+    animation-name: wave2;
+    animation-duration: 0.5s;
+  }
+  .wave-menu li:nth-child(8) {
+    animation-name: wave4;
+    animation-delay: 0.4s;
+    animation-duration: 0.25s;
+  }
+  .wave-menu li:nth-child(9) {
+    animation-name: wave3;
+    animation-delay: 0.15s;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    background: rgb(255, 254, 254);
+    transition: 0.5s all cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader img {
+    position: fixed;
+    left: 39%;
+    width: 20%;
+    top: 8%;
+    border: none;
+    transform: translateX(5%) translateY(0);
+    transition: 0.5s ease;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail {
+    position: relative;
+    top: 90px;
+    transform: none;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail h4 {
+    font-size: 16px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic {
+    position: relative;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic h4 {
+    font-size: 12px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight .VxAuthorHeader .VxAuthorDetail .VxAuthorMusic span {
+    font-size: 12px;
+  }
+  .VxAuthor .VxAuthorContent.DelHeight #Profxxx {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .BxtnBack {
+    position: relative;
+    top: 25px;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .BxtnBack h4 {
+    font-weight: normal;
+    font-size: 12px;
   }
 }
