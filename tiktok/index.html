@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TikChl - Downloader</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bento-wrapper">
+      <header class="bento-item header-grid">
+        <div class="logo-area">
+          <h1>Tik<span>Chl</span></h1>
+          <p>Download Video, Music, & Slides.</p>
+        </div>
+        <div class="input-area">
+          <input
+            type="text"
+            id="videoUrl"
+            placeholder="Tempel link TikTok di sini..."
+            autocomplete="off"
+          />
+          <button id="downloadBtn">Proses</button>
+        </div>
+      </header>
+
+      <div id="result" class="hidden">
+        <div id="loader" class="loader hidden"></div>
+
+        <div class="bento-grid-results">
+          <div class="bento-item preview-card">
+            <div id="videoContent" class="hidden">
+              <img id="videoThumb" src="" alt="Thumbnail" />
+              <h3 id="videoTitle">Judul Konten</h3>
+            </div>
+          </div>
+
+          <div class="bento-item action-card">
+            <div class="status-indicator">Download</div>
+            <div class="button-stack">
+              <button id="saveBtn" class="btn-primary">
+                Unduh Video (MP4)
+              </button>
+              <button id="musicBtn" class="btn-secondary">
+                Unduh Musik (MP3)
+              </button>
+            </div>
+            <div id="downloadProgressContainer" class="hidden">
+              <div class="progress-info">
+                <span id="progressPercent">0%</span>
+                <span id="progressSize">0 MB / 0 MB</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div id="progressFill" class="progress-fill-anim"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="photoAlbum" class="bento-item photo-card hidden">
+            <div class="album-header">
+              <h4>Slide Photos</h4>
+              <span id="photoCount">0 Photos</span>
+            </div>
+            <div id="photoList" class="photo-flex"></div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="bento-item footer-grid">
+        <div class="footer-info">&copy; 2026 TikChl Studio</div>
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
